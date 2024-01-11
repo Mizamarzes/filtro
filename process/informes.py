@@ -36,11 +36,12 @@ def peliculas_protagonista():
 def buscar_peli_sinopsis_actores():
     lista_objects=cargar_json("peliculas.json")
     pelicula_a_buscar=input("Ingrese id de la pelicula a buscar: ")
-
-
-
-
-
+    
+    for pelicula in lista_objects:
+        if pelicula['id']==pelicula_a_buscar:
+            print(f"Sinopsis de la pelicula: {pelicula['sinopsis']}")
+            print(f"Actores de la pelicula: {pelicula['actores']}")
+    
 
 
 
