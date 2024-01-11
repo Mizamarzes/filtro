@@ -64,3 +64,10 @@ def mostrar_listado(nombre_archivo, campos):
         for campo in campos:
             print(f"{campo.capitalize()}: {dato[campo]}")
         print("---" * 15)
+
+# ---------------------------------------------------
+# mostrar peliculas de forma fea, no me dio el tiempo
+
+def mostrar_peliculas():
+    lista_peliculas=cargar_json("peliculas.json")
+    print(lista_peliculas)

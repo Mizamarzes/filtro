@@ -1,6 +1,7 @@
 from tools.utils import *
 
 #-------------------------------------------
+# crear pelicula
 
 def crear_pelicula():
     lista_pelicula=cargar_json("peliculas.json")
@@ -111,7 +112,47 @@ def key_menu(dato):
     else:
         print("No existe")
     return respuesta
+
+#-------------------------------------------------------
+# eliminar pelicula
+
+def eliminar_pelicula():
+    lista_objects=cargar_json("peliculas.json")
+    id_a_buscar=input("Ingrese id de la pelicula: ")
     
+    pelicula_encontrado=None
+    for pelicula in lista_objects:
+        if pelicula['id']== id_a_buscar:
+            pelicula_encontrado=pelicula
+            break
+    
+    if pelicula_encontrado:
+        lista_objects.remove(pelicula_encontrado)
+        save_json(lista_objects,"peliculas.json")
+        return
+    else:
+        print("Pelicula no encontrada")
+
+#---------------------------------------------------------
+# eliminar actor
+
+def eliminar_actor():
+    lista_objects=cargar_json("actores.json")
+    id_a_buscar=input("Ingrese id del actor: ")
+    
+    actor_encontrado=None
+    for actor in lista_objects:
+        if actor['id']== id_a_buscar:
+            actor_encontrado=actor
+            break
+    
+    if actor_encontrado:
+        lista_objects.remove(actor_encontrado)
+        save_json(lista_objects,"actores.json")
+        return
+    else:
+        print("Actor no encontrada")
+ 
 #-----------------------------------------------------
 # buscar pelicula
 
@@ -123,34 +164,11 @@ def buscar_pelicula():
     for pelicula in lista_objects:
         if pelicula['id']== id_a_buscar:
             pelicula_encontrado=pelicula
+            print(pelicula_encontrado)
             break
     
     if not pelicula_encontrado:
         print("No encontrado")
         return
     
-    return pelicula
 
-
-# def modificar(filename):
-#     lista_data = cargar_json(filename)
-#     id_buscar = int(input("Ingrese numero de identificacion: "))
-#     encontrado = False
-
-#     for datos in lista_data:
-#         if datos['id'] == id_buscar:
-#             encontrado = True
-#             break
-    
-#     if encontrado:
-#         llave = key_menu(lista_data[0]) 
-#         nuevo_valor = input("Ingrese el nuevo valor: ")
-
-#         for datos in lista_data:
-#             if datos["id"] == id_buscar:
-#                 datos[llave] = nuevo_valor
-#                 break
-
-#         save_json(lista_data, filename)
-#     else:
-#         print("No se encontro el camper")

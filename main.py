@@ -69,13 +69,15 @@ def peliculas():
         elif subopcion==2:
             editar_pelicula()
         elif subopcion==3:
-            print()
+            eliminar_pelicula()
         elif subopcion==4:
-            print()
+            eliminar_actor()
         elif subopcion==5:
-            pelicula=buscar_pelicula
+            buscar_pelicula()
+            input("[Presione cualquier tecla para continuar]: ")
         elif subopcion==6:
-            print()
+            mostrar_peliculas()
+            input("[Presione cualquier tecla para continuar]: ")
         elif subopcion==7:
             break
             

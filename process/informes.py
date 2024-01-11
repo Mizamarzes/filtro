@@ -1,26 +1,26 @@
 
 from tools.utils import *
 #------------------------------------------
-# buscar pelicula y mostrar sinopsis y los actores
+# listar las peliculas de un genero especifico
 
-# def buscar_pelicula():
-#     lista_objects=cargar_json("peliculas.json")
+def genero_especifico():
+    lista_objects=cargar_json("peliculas.json")
+    genero_a_buscar=input("Ingrese id del genero a buscar: ")
     
-#     id_a_buscar=input("Ingrese id de la pelicula: ")
+    genero_encontrado=None
+    for genero in lista_objects:
+        if genero['genero']== genero_a_buscar:
+            genero_encontrado=genero
+            print(genero_encontrado)
+            break
     
-    
-#     genero_encontrado=None
-#     for genero in lista_objects:
-#         if genero['id']== id_a_buscar:
-#             genero_encontrado=genero
-#             break
-    
-#     if not genero_encontrado:
-#         print("Genero no encontrado")
-#         return
-    
-#     nuevo_objeto_agg.append(genero_encontrado)
-#     return nuevo_objeto_agg
+    if not genero_encontrado:
+        print("No encontrado")
+        return
+
+#----------------------------------------------
+#buscar pelicula y mostrar la sinopsis y los actores
+
 
 
 
