@@ -1,6 +1,5 @@
 import json, os
 
-
 #-------------------------------------------------------------------------------------------
 # cargar json
 
@@ -8,7 +7,7 @@ def cargar_json(filename_path):
     try:
         with open(os.path.join("data", filename_path), 'r') as archivo_json:        
             lista_peliculas = json.load(archivo_json)
-            print("La lista ha sido cargada")
+            # print("La lista ha sido cargada")
             return lista_peliculas
     except Exception as e:
         print(f"Error al cargar el archivo: {e}")
@@ -22,7 +21,7 @@ def save_json(lista_peliculas, filename):
     try:
         with open(os.path.join("data", filename), 'w', encoding="utf-8") as archivo_json:
             json.dump(lista_peliculas, archivo_json, indent=2, ensure_ascii=False)
-            print(f"La lista de {filename} ha sido guardada")
+            # print(f"La lista de {filename} ha sido guardada")
     except FileNotFoundError:
         print(f"El archivo {filename} no existe. Puede que aún no haya peliculas guardados.")
     except json.JSONDecodeError:

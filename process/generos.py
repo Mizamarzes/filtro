@@ -10,7 +10,7 @@ def crear_genero():
     
     new_genero={
         "id": id_genero,
-        "nombre": nombre_genero
+        "nombre": nombre_genero 
     }
     
     lista_generos.append(new_genero)

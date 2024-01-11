@@ -7,6 +7,8 @@ from tools.utils import *
 from process.generos import crear_genero
 from process.actores import crear_actor
 from process.formatos import crear_formato
+from process.peliculas import *
+from process.informes import *
 
 def generos():
     while True:
@@ -15,7 +17,7 @@ def generos():
         if subopcion==1:
             crear_genero()
         elif subopcion==2:
-            mostrar_listado("generos.json",campo_generos)
+            mostrar_listado("generos.json", campo_generos)
             input("[Presione cualquier tecla para continuar]: ")
         elif subopcion==3:
             break
@@ -23,29 +25,32 @@ def generos():
 def actores():
     while True:
         limpiar_pantalla()
-        subopcion=menu_actores
-        if subopcion==1:
+        subopcion = menu_actores()
+        if subopcion == 1:
             crear_actor()
-        elif subopcion==2:
-            mostrar_listado("actores.json",campo_actores)
-        elif subopcion==3:
+        elif subopcion == 2:
+            mostrar_listado("actores.json", campo_actores)
+            input("[Presione cualquier tecla para continuar]: ")
+        elif subopcion == 3:
             break
+
 
 def formatos():
     while True:
         limpiar_pantalla()
-        subopcion=menu_formatos
+        subopcion=menu_formatos()
         if subopcion==1:
             crear_formato()
         elif subopcion==2:
-            mostrar_listado("formatos.json",campo_formatos)
+            mostrar_listado("formatos.json", campo_formatos)
+            input("[Presione cualquier tecla para continuar]: ")
         elif subopcion==3:
             break
 
 def informes():
     while True:
         limpiar_pantalla()
-        subopcion=menu_informes
+        subopcion=menu_informes()
         if subopcion==1:
             print()
         elif subopcion==2:
@@ -58,17 +63,17 @@ def informes():
 def peliculas():
     while True:
         limpiar_pantalla()
-        subopcion=menu_peliculas
+        subopcion=menu_peliculas()
         if subopcion==1:
-            print()
+            crear_pelicula()
         elif subopcion==2:
-            print()
+            editar_pelicula()
         elif subopcion==3:
             print()
         elif subopcion==4:
             print()
         elif subopcion==5:
-            print()
+            pelicula=buscar_pelicula
         elif subopcion==6:
             print()
         elif subopcion==7:
@@ -87,7 +92,7 @@ while True:
     elif opcion==3:
         formatos()
     elif opcion==4:
-        print()
+        informes()
     elif opcion==5:
         peliculas()
     elif opcion==6:

@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": "A01",
+    "nombre": "Juan"
+  },
+  {
+    "id": "A02",
+    "nombre": "Pedro"
+  },
+  {
+    "id": "A03",
+    "nombre": "Carlos"
+  }
+]

@@ -6,5 +6,9 @@
   {
     "id": "G02",
     "nombre": "Terror"
+  },
+  {
+    "id": "G03",
+    "nombre": "Comedia"
   }
 ]

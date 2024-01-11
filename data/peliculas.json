@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "id": "P01",
+    "nombre": "craneo magico",
+    "duracion": "2 horas",
+    "sinopsis": "akdlskdl",
+    "generos": {
+      "genero": [
+        {
+          "id": "G01",
+          "nombre": "Accion"
+        }
+      ]
+    },
+    "actores": {
+      "actores": [
+        {
+          "id": "A01",
+          "nombre": "Juan"
+        }
+      ]
+    },
+    "formato": {
+      "formato": [
+        {
+          "id": "F01",
+          "nombre": "DVD"
+        }
+      ]
+    }
+  }
+]
