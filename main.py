@@ -52,7 +52,7 @@ def informes():
         limpiar_pantalla()
         subopcion=menu_informes()
         if subopcion==1:
-            print()
+            genero_especifico()
         elif subopcion==2:
             print()
         elif subopcion==3:

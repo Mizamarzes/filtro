@@ -22,15 +22,15 @@ def crear_pelicula():
         "nombre":nombre_pelicula,
         "duracion":duracion,
         "sinopsis":sinopsis,
-        "generos":{
-            "genero":genero           
-        },
-        "actores":{
-            "actores":actores    
-        },
-        "formato":{
-            "formato":formato
-        }         
+        "generos":[
+            genero           
+        ],
+        "actores":[
+            actores   
+        ],
+        "formato":[
+            formato
+        ]         
     }        
         
     lista_pelicula.append(new_pelicula)

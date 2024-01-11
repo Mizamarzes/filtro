@@ -1,32 +1,57 @@
 [
   {
-    "id": "P01",
-    "nombre": "craneo magico",
-    "duracion": "2 horas",
-    "sinopsis": "A",
-    "generos": {
-      "genero": [
+    "id": "P02",
+    "nombre": "Correr",
+    "duracion": "akdsl",
+    "sinopsis": "ksad",
+    "generos": [
+      [
         {
-          "id": "G01",
-          "nombre": "Accion"
+          "id": "G02",
+          "nombre": "Terror"
         }
       ]
-    },
-    "actores": {
-      "actores": [
+    ],
+    "actores": [
+      [
         {
           "id": "A01",
           "nombre": "Juan"
         }
       ]
-    },
-    "formato": {
-      "formato": [
+    ],
+    "formato": [
+      [
+        {
+          "id": "F02",
+          "nombre": "MP3"
+        }
+      ]
+    ]
+  },
+  {
+    "id": "P01",
+    "nombre": "LOLO",
+    "duracion": "2KDLA",
+    "sinopsis": "kasldka",
+    "generos": [
+      null
+    ],
+    "actores": [
+      [
+        {
+          "id": "A01",
+          "nombre": "Juan"
+        }
+      ]
+    ],
+    "formato": [
+      [
         {
           "id": "F01",
           "nombre": "DVD"
         }
       ]
-    }
+    ]
   }
 ]

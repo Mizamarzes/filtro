@@ -6,17 +6,18 @@ from tools.utils import *
 def genero_especifico():
     lista_objects=cargar_json("peliculas.json")
     genero_a_buscar=input("Ingrese id del genero a buscar: ")
+    peliculas_del_genero=[]
     
-    genero_encontrado=None
-    for genero in lista_objects:
-        if genero['genero']== genero_a_buscar:
-            genero_encontrado=genero
-            print(genero_encontrado)
-            break
+    for pelicula in lista_objects:
+        if genero_a_buscar in pelicula['generos'].lower():
+            peliculas_del_genero.append(pelicula)
     
-    if not genero_encontrado:
-        print("No encontrado")
-        return
+    if peliculas_del_genero:
+        print(f"Películas del género '{genero_a_buscar}':")
+        for pelicula in peliculas_del_genero:
+            print(f"ID: {pelicula['id']}, Título: {pelicula['titulo']}")
+    else:
+        print(f"No hay películas del género '{genero_a_buscar}'.")
 
 #----------------------------------------------
 #buscar pelicula y mostrar la sinopsis y los actores
