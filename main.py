@@ -53,10 +53,13 @@ def informes():
         subopcion=menu_informes()
         if subopcion==1:
             genero_especifico()
+            input("[Presione cualquier tecla para continuar]: ")
         elif subopcion==2:
-            print()
+            peliculas_protagonista()
+            input("[Presione cualquier tecla para continuar]: ")
         elif subopcion==3:
-            print()
+            buscar_peli_sinopsis_actores()
+            input("[Presione cualquier tecla para continuar]: ")
         elif subopcion==4:
             break
 

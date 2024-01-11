@@ -28,30 +28,5 @@
         }
       ]
     ]
-  },
-  {
-    "id": "P01",
-    "nombre": "LOLO",
-    "duracion": "2KDLA",
-    "sinopsis": "kasldka",
-    "generos": [
-      null
-    ],
-    "actores": [
-      [
-        {
-          "id": "A01",
-          "nombre": "Juan"
-        }
-      ]
-    ],
-    "formato": [
-      [
-        {
-          "id": "F01",
-          "nombre": "DVD"
-        }
-      ]
-    ]
   }
 ]

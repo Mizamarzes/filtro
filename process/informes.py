@@ -6,21 +6,37 @@ from tools.utils import *
 def genero_especifico():
     lista_objects=cargar_json("peliculas.json")
     genero_a_buscar=input("Ingrese id del genero a buscar: ")
-    peliculas_del_genero=[]
     
     for pelicula in lista_objects:
-        if genero_a_buscar in pelicula['generos'].lower():
-            peliculas_del_genero.append(pelicula)
+        generos_pelicula = pelicula.get('generos', [])
+        for genero_lista in generos_pelicula:
+            for genero in genero_lista:
+                if genero['id'] == genero_a_buscar:
+                    print(pelicula)
+                    break
     
-    if peliculas_del_genero:
-        print(f"Películas del género '{genero_a_buscar}':")
-        for pelicula in peliculas_del_genero:
-            print(f"ID: {pelicula['id']}, Título: {pelicula['titulo']}")
-    else:
-        print(f"No hay películas del género '{genero_a_buscar}'.")
+#-------------------------------------------------------------
+# peliculas donde sea el mismo protagonista
 
+def peliculas_protagonista():
+    lista_objects=cargar_json("peliculas.json")
+    protagonista_a_buscar=input("Ingrese id del protagonista a buscar: ")
+    
+    for pelicula in lista_objects:
+        actores_pelicula = pelicula.get('actores', [])
+        for actor_lista in actores_pelicula:
+            for actor in actor_lista:
+                if actor['id'] == protagonista_a_buscar:
+                    print(pelicula)
+                    break 
+                
 #----------------------------------------------
 #buscar pelicula y mostrar la sinopsis y los actores
+
+def buscar_peli_sinopsis_actores():
+    lista_objects=cargar_json("peliculas.json")
+    pelicula_a_buscar=input("Ingrese id de la pelicula a buscar: ")
+
 
 
 
